@@ -1,52 +1,31 @@
-import React, { useState } from "react";
-import { useNavigate, Navigate } from "react-router-dom"; // Importa Navigate y useNavigate
-import logo from "./LOGOTIPO.png"; // Asegúrate de que la ruta sea correcta
-import personaje_control_panel from "./personaje_control_panel.png"; // Asegúrate de que la ruta sea correcta
+import React, { useState } from 'react';
+import logo from './LOGOTIPO.png'; // Asegúrate de que la ruta sea correcta
+import personaje_control_panel from './personaje_control_panel.png'; // Asegúrate de que la ruta sea correcta
 
-import "./conectado.css"; // Si tienes estilos personalizados
+import './conectado.css'; // Si tienes estilos personalizados
+import { Navigate } from 'react-router-dom'; // Importa Navigate
 
 function App() {
   const [loggedOut, setLoggedOut] = useState(false); // Estado para manejar el logout
-  const navigate = useNavigate(); // Obtén la función de navegación
 
   // Función para manejar el cierre de sesión
   const handleLogout = () => {
-    const confirmLogout = window.confirm("¿Estás seguro de que quieres cerrar sesión?");
-    
-    if (confirmLogout) {
-      setLoggedOut(true); // Cambia el estado para activar la redirección
-    }
-    // Si el usuario no confirma, no se hace nada
-  };
+    setLoggedOut(true); // Cambia el estado para activar la redirección
+  }
 
   // Si el estado loggedOut es true, redirigir a /App
   if (loggedOut) {
     return <Navigate to="/App" />;
   }
 
-  // Función para navegar a la página de gestión de usuarios
-  const ir_gestion_usuarios = () => {
-    navigate("/gestion_usuarios"); // Usa navigate para redirigir
-  };
-
   return (
-    <div className="App">
-      {" "}
-      {/* Contenedor principal */}
-      <img
-        src={personaje_control_panel}
-        className="App-personaje_control_panel"
-        alt="personaje_control_panel"
-      />
-      <div className="inicio">
+    <div className="App"> {/* Contenedor principal */}
+        <img src={personaje_control_panel} className="App-personaje_control_panel" alt="personaje_control_panel" />
+      <div className='inicio'>
         <img src={logo} className="App-logo" alt="logo" />
-        <h2 style={{ color: "rgba(0, 255, 203, 1)" }}>GESTION DE SERVIDOR</h2>
+        <h2 style={{ color: 'rgba(0, 255, 203, 1)' }}>GESTION DE SERVIDOR</h2>
 
-        <button
-          className="login-button"
-          type="button"
-          onClick={ir_gestion_usuarios}
-        >
+        <button className="login-button" type="submit">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -55,12 +34,11 @@ function App() {
           >
             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-3.31 0-10 1.67-10 5v2h20v-2c0-3.33-6.69-5-10-5z" />
           </svg>
-          USUARIOS
+          TESTING
         </button>
         <br />
 
-        {/* Otras secciones con botones */}
-        <button className="login-button" type="button">
+        <button className="login-button" type="submit">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -73,7 +51,7 @@ function App() {
         </button>
         <br />
 
-        <button className="login-button" type="button">
+        <button className="login-button" type="submit">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -86,7 +64,7 @@ function App() {
         </button>
         <br />
 
-        <button className="login-button" type="button">
+        <button className="login-button" type="submit">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -99,11 +77,7 @@ function App() {
         </button>
         <br />
 
-        <button
-          className="cerrarsesion-button"
-          type="button"
-          onClick={handleLogout}
-        >
+        <button className="cerrarsesion-button" type="submit" onClick={handleLogout}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -117,22 +91,6 @@ function App() {
         <br />
       </div>
       {/* Otros elementos de la interfaz */}
-      <div className="datos"> {/* Contenedor de datos del usuario */}
-        <div className="datos-titulo"> {/* Subtitulo */}
-          <h1>TU CUENTA</h1>
-        </div>
-        <div className="datos-info"> {/* Información del usuario */}
-          <div className="info-item">
-            <p>Nombre: "@Bastian Contreras"</p>
-          </div>
-          <div className="info-item">
-            <p>Rol: "@Administrador"</p>
-          </div>
-          <div className="info-item">
-            <p>ID: "#@HRFTS"</p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

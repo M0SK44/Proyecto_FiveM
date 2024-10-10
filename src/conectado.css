@@ -1,5 +1,8 @@
 /* Estilos generales de la aplicación */
 .App {
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  display: flex; /* Utiliza flexbox para centrar el contenido */
   background-color: rgb(21, 24, 39); /* Cambia esto por el color que desees */
   min-height: 100vh; /* Asegúrate de que cubra toda la altura de la ventana */
 }
@@ -8,10 +11,10 @@
   height: 15vmin;
   pointer-events: none;
   background-color: rgba(12, 14, 22, 0);
-  opacity: 1.0;
+  opacity: 1;
   float: center; /* Mueve el logo a la izquierda */
   margin-right: 20px; /* Espaciado opcional entre el logo y otros elementos */
-} 
+}
 .App-personaje_control_panel {
   position: absolute; /* Permite que se mueva fuera del flujo normal del layout */
   bottom: 0; /* Ajusta la distancia desde la parte inferior */
@@ -41,12 +44,11 @@
   align-items: center; /* Centrar horizontalmente */
 }
 
-
 /* Estilos para el botón */
-.cerrarsesion-button{
+.cerrarsesion-button {
   width: 270px; /* Mismo ancho que los input */
   padding: 10px;
-  background-color:  rgba(255, 93, 93, 1); /* Color de fondo */
+  background-color: rgba(255, 93, 93, 1); /* Color de fondo */
   color: white; /* Color del texto */
   border: none; /* Sin bordes */
   border-radius: 5px; /* Bordes redondeados */
@@ -60,4 +62,96 @@
 
 .cerrarsesion-button:hover {
   background-color: rgba(0, 200, 180, 1); /* Color de fondo al hacer hover */
+}
+
+.datos {
+  width: 500px; /* Ancho del contenedor */
+  height: auto; /* Cambia a auto para que ajuste la altura según el contenido */
+  background-color: rgb(12, 14, 22); /* Color de fondo */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 1px solid rgb(12, 14, 22);
+  box-shadow: 0 2px 10px rgb(12, 14, 22); /* Sombra opcional para dar profundidad */
+  display: flex; /* Utiliza flexbox para centrar el contenido dentro */
+  flex-direction: column; /* Cambia la dirección del contenido a columna */
+  justify-content: flex-start; /* Alinea el contenido al inicio del contenedor */
+  margin-top: -500px; /* Reduce el margen superior para moverlo hacia arriba */
+  margin-left: -780px; /* Reduce el margen izquierdo para moverlo hacia la izquierda */
+}
+
+.datos-titulo {
+  width: 100%; /* Ancho del contenedor */
+  height: 60px; /* Altura del contenedor */
+  background-color: rgba(30, 34, 53, 0.952); /* Color de fondo */
+  border: 1px solid rgb(12, 14, 22);
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgb(12, 14, 22); /* Sombra opcional para dar profundidad */
+  display: flex; /* Utiliza flexbox para centrar el contenido dentro */
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+.datos-titulo h1 {
+  color: rgba(0, 255, 203, 1); /* Color del texto */
+  text-align: left; /* Alinear texto a la izquierda */
+  margin: 0; /* Sin margen */
+  padding: 10px; /* Espacio interno alrededor del texto (ajusta según sea necesario) */
+  left: 10px; /* Ajusta la posición a la izquierda */
+  top: 5px; /* Ajusta la posición hacia arriba */
+  font-size: 24px; /* Tamaño de la fuente (ajusta según sea necesario) */
+}
+
+.datos {
+  width: 350px; /* Ancho del contenedor */
+  height: auto; /* Ajustar altura automáticamente */
+  background-color: rgb(12, 14, 22); /* Color de fondo */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 1px solid rgb(12, 14, 22);
+  box-shadow: 0 2px 10px rgb(12, 14, 22); /* Sombra opcional para dar profundidad */
+  display: flex; /* Utiliza flexbox para centrar el contenido dentro */
+  flex-direction: column; /* Cambia la dirección del contenido a columna */
+  justify-content: flex-start; /* Alinea el contenido al inicio del contenedor */
+  margin-top: -500px; /* Reduce el margen superior para moverlo hacia arriba */
+  margin-left: -780px; /* Reduce el margen izquierdo para moverlo hacia la izquierda */
+}
+
+.datos-titulo {
+  width: 100%; /* Ancho del contenedor */
+  height: 60px; /* Altura del contenedor */
+  background-color: rgba(30, 34, 53, 0.952); /* Color de fondo */
+  border: 1px solid rgb(12, 14, 22);
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgb(12, 14, 22); /* Sombra opcional para dar profundidad */
+  display: flex; /* Utiliza flexbox para centrar el contenido dentro */
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+.datos-titulo h1 {
+  color: rgba(0, 255, 203, 1); /* Color del texto */
+  text-align: left; /* Alinear texto a la izquierda */
+  margin: 0; /* Sin margen */
+  padding: 10px; /* Espacio interno alrededor del texto (ajusta según sea necesario) */
+  left: 10px; /* Ajusta la posición a la izquierda */
+  top: 5px; /* Ajusta la posición hacia arriba */
+  font-size: 24px; /* Tamaño de la fuente (ajusta según sea necesario) */
+}
+
+.datos-info {
+  color: rgb(255, 255, 255); /* Color del texto */
+  margin: 0; /* Sin margen */
+  font-size: 16px; /* Tamaño de la fuente */
+  padding: 10px; /* Espacio interno alrededor del texto */
+  display: flex; /* Utiliza flexbox para que los párrafos se alineen */
+  flex-direction: column; /* Coloca los elementos en columnas */
+  align-items: flex-start; /* Alinea los elementos al inicio (izquierda) */
+}
+
+.info-item {
+  background-color: rgba(30, 34, 53, 0.8); /* Color de fondo para cada ítem */
+  border-radius: 5px; /* Bordes redondeados para el fondo */
+  padding: 5px; /* Espacio interno para los párrafos */
+  margin-bottom: 10px; /* Espacio entre los ítems */
+}
+
+.info-item p {
+  margin: 0; /* Sin margen */
+  width: 100%; /* Asegura que el párrafo ocupe todo el ancho del contenedor */
 }
