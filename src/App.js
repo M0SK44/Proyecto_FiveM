@@ -67,7 +67,7 @@ function App() {
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              placeholder="Usuario"
+              placeholder="Tu usuario"
               required
               className="input-field"
             />
