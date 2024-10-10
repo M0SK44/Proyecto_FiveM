@@ -1,0 +1,114 @@
+/* Estilos generales de la aplicación */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 24vmin;
+  pointer-events: none;
+  opacity: 1.0;
+  background-color: rgb(21, 24, 39);
+}
+
+.App-personaje_login {
+  position: absolute; /* Permite que se mueva fuera del flujo normal del layout */
+  bottom: 0; /* Ajusta la distancia desde la parte inferior */
+  left: 20px; /* Ajusta la distancia desde la parte izquierda */
+  width: 650px; /* Controla el tamaño de la imagen */
+  z-index: 1000; /* Asegura que la imagen esté encima de otros elementos */
+}
+
+.App-personaje_login2 {
+  position: absolute; /* Permite que se mueva fuera del flujo normal del layout */
+  bottom: 0; /* Ajusta la distancia desde la parte inferior */
+  right: 20px; /* Ajusta la distancia desde la parte izquierda */
+  width: 500px; /* Controla el tamaño de la imagen */
+  z-index: 1000; /* Asegura que la imagen esté encima de otros elementos */
+}
+
+
+
+/* Estilos del encabezado de la aplicación */
+.App-header {
+  background-color: rgb(21, 24, 39); /* Cambiado el color de fondo */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(255, 255, 255);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Contenedor de entrada */
+.input-container {
+  margin: 10px 0;
+}
+
+/* Estilos para los campos de entrada */
+.input-field {
+  width: 250px; /* Ancho del input */
+  padding: 10px;
+  border: 1px solid rgba(114, 137, 217, 1);
+  border-radius: 5px;
+  background-color: rgba(21, 24, 39, 0.6);
+  color: rgba(255, 255, 255, 1); /* Color del texto del input */
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+/* Estilos para el campo de entrada en foco */
+.input-field:focus {
+  border-color: rgba(0, 255, 203, 1);
+  outline: none;
+}
+
+/* Color del placeholder */
+.input-field::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+/* Estilos para el botón */
+.login-button {
+  width: 270px; /* Mismo ancho que los input */
+  padding: 10px;
+  background-color: rgba(114, 137, 217, 1); /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  display: flex; /* Flexbox para alinear el ícono y el texto */
+  align-items: center; /* Alinear verticalmente */
+  justify-content: center; /* Alinear horizontalmente */
+  gap: 8px; /* Espaciado entre el ícono y el texto */
+  transition: background-color 0.3s ease; /* Transición suave en el color de fondo */
+}
+
+.login-button:hover {
+  background-color: rgba(0, 200, 180, 1); /* Color de fondo al hacer hover */
+}
+
+.login-button:focus {
+  outline: none; /* Eliminar contorno de foco */
+}
+
+.login-icon {
+  width: 18px; /* Tamaño del ícono */
+  height: 18px;
+}
+
+
+/* Estilo para el texto del pie de página donde dice2 copyright*/
+.© {
+  position: absolute; /* Posicionar el elemento */
+  bottom: 0; /* Lo lleva a la parte inferior */
+  left: 50%; /* Lo centra horizontalmente */
+  transform: translateX(-50%); /* Ajusta la posición para centrar correctamente */
+  font-size: 14px; /* Tamaño de texto */
+  color: rgba(255, 255, 255, 0.8); /* Color del texto */
+  margin: 10px 0; /* Espaciado inferior */
+}

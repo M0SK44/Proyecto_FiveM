@@ -1,0 +1,63 @@
+/* Estilos generales de la aplicación */
+.App {
+  background-color: rgb(21, 24, 39); /* Cambia esto por el color que desees */
+  min-height: 100vh; /* Asegúrate de que cubra toda la altura de la ventana */
+}
+
+.App-logo {
+  height: 15vmin;
+  pointer-events: none;
+  background-color: rgba(12, 14, 22, 0);
+  opacity: 1.0;
+  float: center; /* Mueve el logo a la izquierda */
+  margin-right: 20px; /* Espaciado opcional entre el logo y otros elementos */
+} 
+.App-personaje_control_panel {
+  position: absolute; /* Permite que se mueva fuera del flujo normal del layout */
+  bottom: 0; /* Ajusta la distancia desde la parte inferior */
+  right: 0px; /* Ajusta la distancia desde la parte izquierda */
+  width: 400px; /* Controla el tamaño de la imagen */
+  z-index: 1000; /* Asegura que la imagen esté encima de otros elementos */
+}
+
+.inicio {
+  position: fixed; /* Fija el elemento en la parte superior */
+  top: 0; /* Alinea el encabezado en la parte superior */
+  left: 0; /* Alinea el encabezado a la izquierda */
+  width: 300px; /* Define el ancho del encabezado (ajústalo según necesites) */
+  height: 100vh; /* Asegura que el encabezado ocupe toda la altura de la ventana */
+  background-color: rgb(12, 14, 22); /* Color de fondo */
+  /* Borde */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 40px rgb(12, 14, 22); /* Sombra opcional para dar profundidad */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  padding: 20px; /* Espaciado interno opcional */
+  overflow: auto; /* Para manejar el desbordamiento si hay contenido adicional */
+
+  /* Flexbox para centrar el contenido */
+  display: flex; /* Activar flexbox */
+  flex-direction: column; /* Disposición vertical */
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+}
+
+
+/* Estilos para el botón */
+.cerrarsesion-button{
+  width: 270px; /* Mismo ancho que los input */
+  padding: 10px;
+  background-color:  rgba(255, 93, 93, 1); /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  display: flex; /* Flexbox para alinear el ícono y el texto */
+  align-items: center; /* Alinear verticalmente */
+  justify-content: center; /* Alinear horizontalmente */
+  gap: 8px; /* Espaciado entre el ícono y el texto */
+  transition: background-color 0.3s ease; /* Transición suave en el color de fondo */
+}
+
+.cerrarsesion-button:hover {
+  background-color: rgba(0, 200, 180, 1); /* Color de fondo al hacer hover */
+}
