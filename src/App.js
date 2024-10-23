@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import logo from './LOGOTIPO.png'; // Asegúrate de que la ruta sea correcta
-import personaje_login from './personaje_login.png'; // Asegúrate de que la ruta sea correcta
-import personaje_login2 from './personaje_login2.png';
-import './App.css'; // Si tienes estilos personalizados
-import { Navigate } from 'react-router-dom'; // Importa Navigate
+import React, { useState, useEffect } from "react";
+import logo from "./LOGOTIPO.png"; // Asegúrate de que la ruta sea correcta
+import personaje_login from "./personaje_login.png"; // Asegúrate de que la ruta sea correcta
+import personaje_login2 from "./personaje_login2.png";
+import "./App.css"; // Si tienes estilos personalizados
+import { Navigate } from "react-router-dom"; // Importa Navigate
+
 
 function App() {
   // Estado para manejar los campos del formulario y el mensaje de error
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Estado para manejar la autenticación
 
   // Función para manejar el envío del formulario
@@ -17,26 +18,23 @@ function App() {
     e.preventDefault(); // Evitar el comportamiento por defecto del formulario
 
     // Validación simple
-    if (username === 'admin' && password === '1234') {
-      alert('Iniciaste sesión con éxito');
-      setError(''); // Limpiar el mensaje de error
+    if (username === "admin" && password === "1234") {
+      alert("Iniciaste sesión con éxito");
+      setError(""); // Limpiar el mensaje de error
       setIsLoggedIn(true); // Actualiza el estado a autenticado
     } else {
-      setError('Credenciales del servidor erróneas.');
-
+      setError("Credenciales del servidor erróneas.");
       // Después de 5 segundos, cambiar el mensaje y limpiar los campos
       setTimeout(() => {
-        setError('Vuelve a intentarlo.');
-        setUsername(''); // Restablecer el campo de usuario
-        setPassword(''); // Restablecer el campo de contraseña
+        setError("Vuelve a intentarlo.");
+        setUsername(""); // Restablecer el campo de usuario
+        setPassword(""); // Restablecer el campo de contraseña
 
         // Después de 5 segundos más, limpiar el mensaje de error
         setTimeout(() => {
-          setError(''); // Limpiar el mensaje
-        }, 2000); // 5000 milisegundos más = 5 segundos adicionales
-
-      }, 5000); // Primer temporizador para cambiar el mensaje
-
+          setError(""); // Limpiar el mensaje
+        }, 1000); // 5000 milisegundos más = 5 segundos adicionales
+      }, 2000); // Primer temporizador para cambiar el mensaje
     }
   };
 
@@ -95,9 +93,11 @@ function App() {
             Conectarse
           </button>
         </form>
-        {error && <p style={{ color: 'rgba(255, 93, 93, 1)' }}>{error}</p>}
-        <p className="©">2024 © TIKI TI ROLEPLAY</p>
+        {error && <p style={{ color: "rgba(255, 93, 93, 1)" }}>{error}</p>}
+        <p className="©">2024 © AdCore</p>
+        
       </header>
+      
     </div>
   );
 }

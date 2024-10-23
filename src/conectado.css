@@ -155,3 +155,104 @@
   margin: 0; /* Sin margen */
   width: 100%; /* Asegura que el párrafo ocupe todo el ancho del contenedor */
 }
+
+/* Usuarios tabla */
+
+/* crudusuarios.css */
+.crudusuarios {
+  display: flex;
+  flex-direction: column; /* Asegura que el input esté encima de la tabla */
+  align-items: center; /* Centra la tabla horizontalmente */
+  margin: 20px; /* Espacio alrededor del contenedor */
+}
+
+.custom-table {
+  border-collapse: separate; /* Permite bordes redondeados */
+  border-spacing: 0; /* Elimina el espacio entre celdas */
+  background-color: #fffefe;
+  width: 80%; /* Ancho de la tabla, ajústalo según sea necesario */
+  max-width: 800px; /* Ancho máximo */
+  border-radius: 5px; /* Bordes redondeados en la tabla */
+  overflow: hidden; /* Esconde bordes que sobresalen */
+}
+
+.custom-table th, .custom-table td {
+  border: 1px solid rgba(12, 14, 22, 0.651); /* Bordes de las celdas */
+  padding: 20px; /* Espaciado interno de las celdas */
+  text-align: center; /* Alineación del texto */
+}
+
+/* Bordes redondeados solo para el encabezado */
+.custom-table th {
+  background-color: rgba(12, 14, 22, 1); /* Color de fondo del encabezado */
+  color: rgba(0, 255, 203, 1); /* Color del texto en el encabezado */
+}
+
+.custom-table tr:hover {
+  background-color: rgba(12, 14, 22, 0.527); /* Color de fondo al pasar el mouse */
+}
+
+.busqueda-usuario {
+  display: flex; /* Usar flexbox para alinear el input y el botón */
+  justify-content: space-between; /* Espacio entre el input y el botón */
+  align-items: center; /* Alinear verticalmente los elementos */
+  margin-bottom: 20px; /* Espacio debajo del contenedor */
+  width: 80%; /* Asegúrate de que el contenedor tenga un ancho adecuado */
+}
+
+.search-input {
+  width: 100%; /* Aumenta este valor para hacerlo más largo */
+  max-width: none; /* Remover el ancho máximo para que el 200% tenga efecto */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid rgba(114, 137, 217, 1);
+  border-radius: 5px;
+  background-color: rgba(21, 24, 39, 0.6);
+  color: rgba(255, 255, 255, 1); /* Color del texto del input */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  position: relative; /* Establecer posición relativa */
+  left: -86px; /* Ajusta este valor según sea necesario */
+  box-sizing: border-box; /* Asegurarse de que el padding y el border estén incluidos en el ancho total */
+}
+
+/* Estilos para el campo de búsqueda en foco */
+.search-input:focus {
+  border-color: rgba(0, 255, 203, 1); /* Color del borde al estar en foco */
+  outline: none; /* Sin contorno */
+}
+
+/* Color del placeholder */
+.search-input::placeholder {
+  color: rgb(255, 255, 255); /* Color del texto del placeholder */
+}
+.buscar-button {
+  width: 100px; /* Ancho del botón */
+  padding: 10px; /* Espaciado interno */
+  background-color: rgba(114, 137, 217, 1); /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  display: flex; /* Flexbox para alinear el ícono y el texto */
+  align-items: center; /* Alinear verticalmente */  
+  justify-content: center; /* Alinear horizontalmente */
+  gap: 8px; /* Espaciado entre el ícono y el texto */
+  transition: background-color 0.3s ease; /* Transición suave en el color de fondo */
+  font-size: 16px; /* Tamaño de fuente ajustado */
+  margin-left: -2px; /* Ajusta este valor para mover el botón a la izquierda */
+  font-weight: bold;
+}
+
+.buscar-button:hover {
+  background-color: rgba(0, 200, 180, 1); /* Color de fondo al hacer hover */
+}
+
+.buscar-button:focus {
+  outline: none; /* Eliminar contorno de foco */
+}
+
+.buscar-icon {
+  width: 18px; /* Tamaño del ícono */
+  height: 18px;
+}
+

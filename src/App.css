@@ -75,18 +75,21 @@
 /* Estilos para el botón */
 .login-button {
   width: 270px; /* Mismo ancho que los input */
-  padding: 10px;
+  padding: 10px; /* Ajusta el padding si es necesario */
   background-color: rgba(114, 137, 217, 1); /* Color de fondo */
   color: white; /* Color del texto */
   border: none; /* Sin bordes */
   border-radius: 5px; /* Bordes redondeados */
   cursor: pointer; /* Cambia el cursor a pointer */
   display: flex; /* Flexbox para alinear el ícono y el texto */
-  align-items: center; /* Alinear verticalmente */
+  align-items: center; /* Alinear verticalmente */  
   justify-content: center; /* Alinear horizontalmente */
   gap: 8px; /* Espaciado entre el ícono y el texto */
   transition: background-color 0.3s ease; /* Transición suave en el color de fondo */
+  font-size: 16px; /* Tamaño de fuente ajustado */
+  font-weight: bold;
 }
+
 
 .login-button:hover {
   background-color: rgba(0, 200, 180, 1); /* Color de fondo al hacer hover */
