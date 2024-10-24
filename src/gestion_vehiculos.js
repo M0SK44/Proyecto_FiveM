@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, Navigate } from "react-router-dom"; // Importa Navigate y useNavigate
+import { useNavigate, Navigate } from "react-router-dom"; // Importa useNavigate
 import logo from "./LOGOTIPO.png"; // Asegúrate de que la ruta sea correcta
 import personaje_control_panel from "./personaje_control_panel.png"; // Asegúrate de que la ruta sea correcta
 
@@ -11,14 +11,7 @@ function App() {
 
   // Función para manejar el cierre de sesión
   const handleLogout = () => {
-    const confirmLogout = window.confirm(
-      "¿Estás seguro de que quieres cerrar sesión?"
-    );
-
-    if (confirmLogout) {
-      setLoggedOut(true); // Cambia el estado para activar la redirección
-    }
-    // Si el usuario no confirma, no se hace nada
+    setLoggedOut(true); // Cambia el estado para activar la redirección
   };
 
   // Si el estado loggedOut es true, redirigir a /App
@@ -26,11 +19,9 @@ function App() {
     return <Navigate to="/App" />;
   }
 
-  // Función para navegar a la página de gestión de usuarios
   const ir_gestion_usuarios = () => {
     navigate("/gestion_usuarios"); // Usa navigate para redirigir
   };
-
   const ir_gestion_vehiculos = () => {
     navigate("/gestion_vehiculos"); // Usa navigate para redirigir
   };
@@ -50,7 +41,7 @@ function App() {
 
         <button
           className="login-button"
-          type="button"
+          type="submit"
           onClick={ir_gestion_usuarios}
         >
           <svg
@@ -65,10 +56,9 @@ function App() {
         </button>
         <br />
 
-        {/* Otras secciones con botones */}
         <button
           className="login-button"
-          type="button"
+          type="submit"
           onClick={ir_gestion_vehiculos}
         >
           <svg
@@ -83,7 +73,7 @@ function App() {
         </button>
         <br />
 
-        <button className="login-button" type="button">
+        <button className="login-button" type="submit">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -98,7 +88,7 @@ function App() {
 
         <button
           className="cerrarsesion-button"
-          type="button"
+          type="submit"
           onClick={handleLogout}
         >
           <svg
@@ -113,29 +103,61 @@ function App() {
         </button>
         <br />
       </div>
-      {/* Otros elementos de la interfaz */}
-      <div className="datos">
-        {" "}
-        {/* Contenedor de datos del usuario */}
-        <div className="datos-titulo">
-          {" "}
-          {/* Subtitulo */}
-          <h1>TU CUENTA</h1>
+      <div className="crudusuarios">
+        <div className="busqueda-usuario">
+          <input
+            type="text"
+            placeholder="Buscar licencia, patente..."
+            className="search-input"
+          />
+          <button className="buscar-button" type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="white"
+              className="buscar-icon"
+            >
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+            </svg>
+            Revisar
+          </button>
         </div>
-        <div className="datos-info">
-          {" "}
-          {/* Información del usuario */}
-          <div className="info-item">
-            <p>Nombre: "@Bastian Contreras"</p>
-          </div>
-          <div className="info-item">
-            <p>Rol: "@Administrador"</p>
-          </div>
-          <div className="info-item">
-            <p>ID: "#@HRFTS"</p>
-          </div>
-        </div>
+
+        <table className="custom-table">
+          <thead>
+            <tr>
+              <th>Licencia del dueño</th>
+              <th>Patente</th>
+              <th>Vehículo</th>
+              <th>Aparcamiento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>178aacf080b987f0ce058c861353d63ae3af881d</td>{" "}
+              {/* Ejemplo de licencia */}
+              <td>ABC-123</td> {/* Ejemplo de patente */}
+              <td>Zentorno</td> {/* Modelo de vehículo de GTA V */}
+              <td>Aparcamiento Norte</td> {/* Ubicación de aparcamiento */}
+            </tr>
+            <tr>
+              <td>1b9fc08407de354cead172845d1c43dfd09a1b8a</td>{" "}
+              {/* Otra licencia */}
+              <td>XYZ-789</td> {/* Otra patente */}
+              <td>Sultan RS</td> {/* Modelo de vehículo de GTA V */}
+              <td>Aparcamiento Este</td> {/* Otro aparcamiento */}
+            </tr>
+            <tr>
+              <td>9d7eb0381d7fa0346c9d9b93fa7487b08d7e65ba</td>{" "}
+              {/* Otra licencia */}
+              <td>LMN-456</td> {/* Otra patente */}
+              <td>Adder</td> {/* Modelo de vehículo de GTA V */}
+              <td>Aparcamiento Sur</td> {/* Otro aparcamiento */}
+            </tr>
+          </tbody>
+        </table>
       </div>
+      {/* Otros elementos de la interfaz */}
     </div>
   );
 }
